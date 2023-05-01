@@ -9,7 +9,7 @@ const Layout = () => {
       <Header>
         <Nav>
           <StyledLink to="/">Home</StyledLink>
-          <StyledLink to="/tweets">Tweets</StyledLink>
+          <StyledLink to="tweets">Tweets</StyledLink>
         </Nav>
       </Header>
       <Suspense fallback={null}>
