@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import TweetCard from 'components/UserCard/UserCard';
-import { CardList, BtnLoadMore } from './UserList.styled';
+import { CardList, BtnLoadMore, CardItem } from './UserList.styled';
 
 const TweetsList = () => {
   const [users, setUsers] = useState([]);
@@ -47,9 +47,9 @@ const TweetsList = () => {
       <CardList>
         {users &&
           tweetsToShow.map(user => (
-            <li key={user.id}>
+            <CardItem key={user.id}>
               <TweetCard user={user} />
-            </li>
+            </CardItem>
           ))}
       </CardList>
       {tweetsToShow.length < users.length && (

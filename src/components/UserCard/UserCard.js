@@ -11,7 +11,6 @@ import {
   FollowerTitle,
   Btn,
 } from './UserCard.styled';
-import fon from '../../images/picture.png';
 
 const TweetCard = ({ user }) => {
   const [followState, setFollowState] = usePersistedState(
@@ -38,10 +37,11 @@ const TweetCard = ({ user }) => {
 
   return (
     <CardBox>
-      <img src={fon} alt="description " />
-      <LineAvatar></LineAvatar>
-      <BgAvatar></BgAvatar>
-      <ImgAvatar src={avatar} alt={`Avatar of ${name}`} />
+      <LineAvatar>
+        <BgAvatar>
+          <ImgAvatar src={avatar} alt={`Avatar of ${name}`} />
+        </BgAvatar>
+      </LineAvatar>
       <NameTitle>{name}</NameTitle>
       <TweetTitle>{tweets} Tweets</TweetTitle>
       <FollowerTitle>

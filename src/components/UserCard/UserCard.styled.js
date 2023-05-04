@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import bgImg from '../../images/picture.png';
 
 export const CardBox = styled.div`
   position: relative;
@@ -6,19 +7,17 @@ export const CardBox = styled.div`
   text-align: center;
   width: 380px;
   height: 460px;
-  background: linear-gradient(
-    114.99deg,
-    #471ca9 -0.99%,
-    #5736a3 54.28%,
-    #4b2a99 78.99%
-  );
-  box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
-  border-radius: 20px;
+  background-image: url(${bgImg});
+
+  background-repeat: no-repeat;
+  background-position: 36px 28px;
 `;
 
 export const LineAvatar = styled.div`
   position: absolute;
   top: 214px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 380px;
   height: 8px;
 
@@ -29,12 +28,11 @@ export const LineAvatar = styled.div`
 
 export const BgAvatar = styled.div`
   position: absolute;
-  top: 178px;
+  top: -36px;
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
   height: 80px;
-
   background: #ebd8ff;
   box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
     inset 0px -2.19582px 4.39163px #ae7be3,
@@ -43,11 +41,7 @@ export const BgAvatar = styled.div`
 `;
 
 export const ImgAvatar = styled.img`
-  position: absolute;
-  top: 187px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: auto;
+  margin: 9px auto;
   display: block;
   width: 62px;
   height: 62px;
@@ -55,7 +49,7 @@ export const ImgAvatar = styled.img`
 `;
 
 export const NameTitle = styled.h2`
-  margin-top: 88px;
+  margin-top: 284px;
 
   font-size: 20px;
   line-height: 24px;
@@ -99,4 +93,8 @@ export const Btn = styled.button`
   line-height: 22px;
 
   text-transform: uppercase;
+
+  :hover {
+    box-shadow: inset 1px 1px 27px 5px #4b2a99;
+  }
 `;
